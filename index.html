@@ -174,8 +174,11 @@
     </div>
 
     <div class="event-photo reveal in" style="margin-top:40px;">
-      <img src="2.jpg" alt="" class="photo-slide active" id="slide1">
-      <img src="1.jpg" alt="" class="photo-slide" id="slide2">
+      <img src="2.jpg" alt="" class="photo-slide active">
+      <img src="1.jpg" alt="" class="photo-slide">
+      <img src="3.jpg" alt="" class="photo-slide">
+      <img src="4.jpg" alt="" class="photo-slide">
+      <img src="5.jpg" alt="" class="photo-slide">
     </div>
 
     <!-- HOW IT WORKS -->
@@ -336,10 +339,17 @@
     document.querySelectorAll('.reveal:not(.in)').forEach(function(el){observer.observe(el);});
 
     // Photo crossfade
-    setInterval(function(){
-      var s1=document.getElementById('slide1'),s2=document.getElementById('slide2');
-      if(s1&&s2){s1.classList.toggle('active');s2.classList.toggle('active');}
-    },5000);
+    (function(){
+      var slides=document.querySelectorAll('.event-photo .photo-slide');
+      if(slides.length>1){
+        var idx=0;
+        setInterval(function(){
+          slides[idx].classList.remove('active');
+          idx=(idx+1)%slides.length;
+          slides[idx].classList.add('active');
+        },5000);
+      }
+    })();
 
     // Iframe resize
     function rh(){window.parent.postMessage({type:'resize',height:document.body.scrollHeight},'*');}
