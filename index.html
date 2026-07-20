@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Underground Philosophy — Science and Magic</title>
+  <title>Underground Philosophy — Democracy and Integration</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,8 +14,8 @@
       --text-bright: #ede9e2;
       --text-dim: rgba(212, 207, 199, 0.6);
       --text-mid: rgba(212, 207, 199, 0.8);
-      --gold: #ad92f9;
-      --gold-dim: rgba(173, 146, 249, 0.15);
+      --lavender: #ad92f9;
+      --lavender-dim: rgba(173, 146, 249, 0.15);
       --border: rgba(212, 207, 199, 0.08);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,7 +51,7 @@
     .title { font-family:'Poppins',sans-serif; font-size:clamp(40px,8vw,64px); font-weight:700; line-height:1.2; color:var(--text-bright); margin-bottom:24px; letter-spacing:-0.5px; }
     .topic-questions { font-size:20px; font-weight:300; color:var(--text-bright); line-height:1.7; max-width:560px; margin:0 auto 28px; }
     .meta { font-size:16px; color:var(--text-dim); margin-bottom:8px; line-height:1.7; }
-    .date-highlight { font-size:18px; font-weight:500; color:var(--gold); letter-spacing:1px; margin-bottom:36px; }
+    .date-highlight { font-size:18px; font-weight:500; color:var(--lavender); letter-spacing:1px; margin-bottom:36px; }
 
     /* Photo */
     .event-photo { width:100%; max-width:560px; margin:0 auto 40px; border:1px solid var(--border); position:relative; }
@@ -64,7 +64,7 @@
     .btn-gold {
       font-family:'Poppins',sans-serif; font-size:16px; font-weight:400;
       letter-spacing:3px; text-transform:uppercase; color:var(--text);
-      background:transparent; border:1px solid var(--gold); padding:20px 56px;
+      background:transparent; border:1px solid var(--lavender); padding:20px 56px;
       cursor:pointer; transition:all 0.5s ease; position:relative; overflow:hidden;
       text-decoration:none; display:inline-block;
     }
@@ -81,7 +81,7 @@
 
     /* Section divider + labels */
     .section { margin-top:56px; padding-top:48px; border-top:1px solid var(--border); }
-    .section-label { font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:20px; }
+    .section-label { font-size:12px; font-weight:500; letter-spacing:3px; text-transform:uppercase; color:var(--lavender); margin-bottom:20px; }
 
     /* How it works */
     .how-text { font-size:16px; color:var(--text-mid); line-height:1.8; max-width:540px; margin:0 auto; }
@@ -97,7 +97,7 @@
     .room-faces { display:flex; flex-wrap:wrap; justify-content:center; gap:24px; margin-top:8px; }
     .room-person { display:flex; flex-direction:column; align-items:center; gap:8px; width:88px; }
     .room-person img { width:64px; height:64px; border-radius:50%; object-fit:cover; border:1px solid var(--border); transition:border-color 0.3s ease; }
-    .room-person img:hover { border-color:var(--gold); }
+    .room-person img:hover { border-color:var(--lavender); }
     .room-person span { font-size:12px; color:var(--text-dim); line-height:1.3; text-align:center; }
     .room-note { font-size:13px; color:var(--text-dim); font-style:italic; margin-top:24px; }
 
@@ -125,8 +125,8 @@
     .email-input::placeholder { color:var(--text-dim); }
     .email-input:focus { border-color:rgba(173,146,249,0.3); }
     .email-submit { font-family:'Poppins',sans-serif; font-size:13px; font-weight:400; letter-spacing:2px; text-transform:uppercase; color:var(--text); background:transparent; border:1px solid rgba(173,146,249,0.3); padding:14px 28px; cursor:pointer; transition:all 0.4s ease; }
-    .email-submit:hover { border-color:var(--gold); color:var(--text-bright); }
-    .email-thanks { font-size:15px; color:var(--gold); margin-top:16px; }
+    .email-submit:hover { border-color:var(--lavender); color:var(--text-bright); }
+    .email-thanks { font-size:15px; color:var(--lavender); margin-top:16px; }
 
     /* Final CTA */
     .final-cta { margin-top:56px; padding-top:48px; border-top:1px solid rgba(173,146,249,0.15); }
@@ -164,21 +164,18 @@
 
     <!-- HERO -->
     <p class="label reveal in">Underground Philosophy Presents</p>
-    <h1 class="title reveal in">Science &amp; Magic</h1>
-    <p class="topic-questions reveal in">How might we approach a philosophy of science and magic?</p>
+    <h1 class="title reveal in">Democracy &amp; Integration</h1>
+    <p class="topic-questions reveal in">How does democracy &mdash; 'rule by the people' &mdash; reckon with who belongs in the polis, the nation, the conversation? Is it vulnerable to oligarchic manipulation? Populist reactivity? Is the legitimacy of liberal democracies today in terminal decline?</p>
     <p class="meta reveal in">Caz Reitop's (Underground Theatre), Collingwood</p>
-    <p class="date-highlight reveal in">Thursday 16 July &nbsp;&middot;&nbsp; Doors 5.30pm &nbsp;&middot;&nbsp; 25 seats</p>
+    <p class="date-highlight reveal in">Thursday 20 August &nbsp;&middot;&nbsp; Doors 5.30pm &nbsp;&middot;&nbsp; 25 seats</p>
 
     <div class="reveal in">
       <a class="btn-gold large pulse-btn" id="ticketTop" href="#" target="_blank" onclick="trackTicket('hero')">Get your ticket</a>
     </div>
 
     <div class="event-photo reveal in" style="margin-top:40px;">
-      <img src="2.jpg" alt="" class="photo-slide active">
-      <img src="1.jpg" alt="" class="photo-slide">
-      <img src="3.jpg" alt="" class="photo-slide">
-      <img src="4.jpg" alt="" class="photo-slide">
-      <img src="5.jpg" alt="" class="photo-slide">
+      <img src="2.jpg" alt="" class="photo-slide active" id="slide1">
+      <img src="1.jpg" alt="" class="photo-slide" id="slide2">
     </div>
 
     <!-- HOW IT WORKS -->
@@ -207,7 +204,7 @@
     <div class="section reveal">
       <p class="section-label">The evening</p>
       <p class="event-venue">Caz Reitop's (Underground Theatre), Collingwood</p>
-      <p class="event-date">Thursday 16th July 2026</p>
+      <p class="event-date">Thursday 20th August 2026</p>
       <ul class="schedule">
         <li><span class="t">5.30pm</span><span class="d">Doors &mdash; cocktail lounge upstairs</span></li>
         <li><span class="t">5.50pm</span><span class="d">Take seats in the Vault</span></li>
@@ -255,8 +252,8 @@
 
   <script>
     var CONFIG = {
-      eventName: 'Science and Magic',
-      humanitixUrl: 'https://events.humanitix.com/underground-philosophy-science-and-magic',
+      eventName: 'Democracy and Integration',
+      humanitixUrl: 'https://events.humanitix.com/underground-philosophy-democracy-and-integration/tickets',
       sheetsWebhook: 'https://script.google.com/macros/s/AKfycbzveC7DtgMbeR2i4jRTpZIP499kl3HBHt_UeYO9xkD8xvxrpj5aXsnXCvqVmWNnIHFR/exec'
     };
 
@@ -276,7 +273,7 @@
     var utm=(function(){var p=new URLSearchParams(window.location.search);return{source:p.get('utm_source')||'',medium:p.get('utm_medium')||'',campaign:p.get('utm_campaign')||''};})();
 
     var visitCount=1,isReturn=false;
-    try{var pv=localStorage.getItem('up_sam');if(pv){visitCount=parseInt(pv)+1;isReturn=true;}localStorage.setItem('up_sam',visitCount.toString());}catch(e){}
+    try{var pv=localStorage.getItem('up_dai');if(pv){visitCount=parseInt(pv)+1;isReturn=true;}localStorage.setItem('up_dai',visitCount.toString());}catch(e){}
 
     window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop,d=document.documentElement.scrollHeight-window.innerHeight;if(d>0){var p=Math.round((s/d)*100);if(p>maxScrollDepth)maxScrollDepth=p;}});
 
@@ -339,17 +336,10 @@
     document.querySelectorAll('.reveal:not(.in)').forEach(function(el){observer.observe(el);});
 
     // Photo crossfade
-    (function(){
-      var slides=document.querySelectorAll('.event-photo .photo-slide');
-      if(slides.length>1){
-        var idx=0;
-        setInterval(function(){
-          slides[idx].classList.remove('active');
-          idx=(idx+1)%slides.length;
-          slides[idx].classList.add('active');
-        },5000);
-      }
-    })();
+    setInterval(function(){
+      var s1=document.getElementById('slide1'),s2=document.getElementById('slide2');
+      if(s1&&s2){s1.classList.toggle('active');s2.classList.toggle('active');}
+    },5000);
 
     // Iframe resize
     function rh(){window.parent.postMessage({type:'resize',height:document.body.scrollHeight},'*');}
