@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Underground Philosophy — Democracy and Integration</title>
+  <title>Underground Philosophy — Serpent</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -164,10 +164,10 @@
 
     <!-- HERO -->
     <p class="label reveal in">Underground Philosophy Presents</p>
-    <h1 class="title reveal in">Democracy &amp; Integration</h1>
-    <p class="topic-questions reveal in">How does democracy &mdash; 'rule by the people' &mdash; reckon with who belongs in the polis, the nation, the conversation? Is it vulnerable to oligarchic manipulation? Populist reactivity? Is the legitimacy of liberal democracies today in terminal decline? What has become of the dream of democracy?</p>
+    <h1 class="title reveal in">Serpent</h1>
+    <p class="topic-questions reveal in">What is the significance of 'serpent' for the psyche? Can the notion of pharmakon, an Ancient Greek word meaning either / both poison and remedy, shed light on the many ways the symbol of the snake shows up in myth? Can a deeper understanding of the serpent support a maturation of awareness about the nature of transformation: of renewal, as well as destruction.</p>
     <p class="meta reveal in">Caz Reitop's (Underground Theatre), Collingwood</p>
-    <p class="date-highlight reveal in">Thursday 20 August &nbsp;&middot;&nbsp; Doors 5.30pm &nbsp;&middot;&nbsp; 25 seats</p>
+    <p class="date-highlight reveal in">Thursday 19 September &nbsp;&middot;&nbsp; Doors 5.30pm &nbsp;&middot;&nbsp; 25 seats</p>
 
     <div class="reveal in">
       <a class="btn-gold large pulse-btn" id="ticketTop" href="#" target="_blank" onclick="trackTicket('hero')">Get your ticket</a>
@@ -175,7 +175,8 @@
 
     <div class="event-photo reveal in" style="margin-top:40px;">
       <img src="2.jpg" alt="" class="photo-slide active" id="slide1">
-      <img src="1.jpg" alt="" class="photo-slide" id="slide2">
+      <img src="7.jpg" alt="" class="photo-slide" id="slide2">
+      <img src="8.jpg" alt="" class="photo-slide" id="slide3">
     </div>
 
     <!-- HOW IT WORKS -->
@@ -204,7 +205,7 @@
     <div class="section reveal">
       <p class="section-label">The evening</p>
       <p class="event-venue">Caz Reitop's (Underground Theatre), Collingwood</p>
-      <p class="event-date">Thursday 20th August 2026</p>
+      <p class="event-date">Thursday 19th September 2026</p>
       <ul class="schedule">
         <li><span class="t">5.30pm</span><span class="d">Doors &mdash; cocktail lounge upstairs</span></li>
         <li><span class="t">5.50pm</span><span class="d">Take seats in the Vault</span></li>
@@ -252,8 +253,8 @@
 
   <script>
     var CONFIG = {
-      eventName: 'Democracy and Integration',
-      humanitixUrl: 'https://events.humanitix.com/underground-philosophy-democracy-and-integration/tickets',
+      eventName: 'Serpent',
+      humanitixUrl: 'https://events.humanitix.com/underground-philosophy-serpent',
       sheetsWebhook: 'https://script.google.com/macros/s/AKfycbzveC7DtgMbeR2i4jRTpZIP499kl3HBHt_UeYO9xkD8xvxrpj5aXsnXCvqVmWNnIHFR/exec'
     };
 
@@ -273,7 +274,7 @@
     var utm=(function(){var p=new URLSearchParams(window.location.search);return{source:p.get('utm_source')||'',medium:p.get('utm_medium')||'',campaign:p.get('utm_campaign')||''};})();
 
     var visitCount=1,isReturn=false;
-    try{var pv=localStorage.getItem('up_dai');if(pv){visitCount=parseInt(pv)+1;isReturn=true;}localStorage.setItem('up_dai',visitCount.toString());}catch(e){}
+    try{var pv=localStorage.getItem('up_sap');if(pv){visitCount=parseInt(pv)+1;isReturn=true;}localStorage.setItem('up_sap',visitCount.toString());}catch(e){}
 
     window.addEventListener('scroll',function(){var s=window.pageYOffset||document.documentElement.scrollTop,d=document.documentElement.scrollHeight-window.innerHeight;if(d>0){var p=Math.round((s/d)*100);if(p>maxScrollDepth)maxScrollDepth=p;}});
 
@@ -335,10 +336,14 @@
     },{threshold:0.15});
     document.querySelectorAll('.reveal:not(.in)').forEach(function(el){observer.observe(el);});
 
-    // Photo crossfade
+    // Photo crossfade (3 slides)
+    var slideIdx=0;
     setInterval(function(){
-      var s1=document.getElementById('slide1'),s2=document.getElementById('slide2');
-      if(s1&&s2){s1.classList.toggle('active');s2.classList.toggle('active');}
+      var slides=[document.getElementById('slide1'),document.getElementById('slide2'),document.getElementById('slide3')].filter(Boolean);
+      if(slides.length<2)return;
+      slides[slideIdx].classList.remove('active');
+      slideIdx=(slideIdx+1)%slides.length;
+      slides[slideIdx].classList.add('active');
     },5000);
 
     // Iframe resize
