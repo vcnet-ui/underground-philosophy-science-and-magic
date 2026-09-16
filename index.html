@@ -347,7 +347,7 @@
     },5000);
 
     // Iframe resize
-    function rh(){window.parent.postMessage({type:'resize',height:document.body.scrollHeight},'*');}
+    function rh(){window.parent.postMessage({type:'resize',height:document.querySelector('.container').offsetHeight},'*');}
     window.addEventListener('load',function(){setTimeout(rh,100);});
     window.addEventListener('resize',rh);
     setInterval(rh,2000);
